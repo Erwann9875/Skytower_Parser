@@ -11,7 +11,7 @@ class EndPlugin(Plugin):
 
         if at and rbr2_plugin:
             floor_level = rbr2_plugin[0]
-            self.lua = f"""local skyTower = SkyTower.Create({floor_level})  -- SkyTower Floor Level
+            self.lua = f"""local skyTower = SkyTower.Create({floor_level - 1})  -- SkyTower Floor Level
     .SetMaps({{map_1}})
     .SetSpawn(Location.InMap(map_1).At({at[3]}, {at[4]}))
     .SetLives(1)
